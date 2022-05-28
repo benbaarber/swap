@@ -1,5 +1,19 @@
 # Swap: The Day-Trading Game (with fake money)
 
+## Introduction
+
+Swap is an online game that lets the user use in-game currency to trade real cryptocurrency. It is meant to allow the user to try their hand at day-trading in the volatile cryptocurrency market with no consequences.
+
+## Motivation
+
+I've had this idea to make a risk-free cryptocurrency trading game for a while now. Now that I finally have the tools and skills to create it, I decided the final project for my Full Stack Development Nanodegree was the perfect chance to do so. I plan to add more functionality and make a full-fledged application out of this in the future.
+
+## Tech Stack
+
+Frontend: ReactJS
+
+Backend: Flask, PostgreSQL, SQLAlchemy
+
 ## Navigation
 
 The website is deployed at [this link](http://swap-bongobooks.herokuapp.com/index.html).
