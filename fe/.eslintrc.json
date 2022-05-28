@@ -1,0 +1,21 @@
+{
+    "parserOptions": {
+      "ecmaVersion": 2015,
+      "sourceType": "module"
+    },
+    "parser": "@babel/eslint-parser",
+    "plugins": ["prettier", "unused-imports"],
+    "env": {
+      "es6": true,
+      "browser": false
+    },
+    "rules": {
+      "semi": "off",
+      "quotes": "off",
+      "prettier/prettier": "warn",
+      "no-empty-pattern": "error",
+      "no-shadow": "error",
+      "no-unused-vars": "off"
+    }
+  }
+  

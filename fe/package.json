@@ -1,0 +1,113 @@
+{
+  "name": "swap-fe",
+  "version": "1.0.0",
+  "description": "Swap UI",
+  "main": "index.js",
+  "repository": "",
+  "author": "benbaarber",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn && webpack",
+    "hot": "webpack && webpack serve",
+    "test:unit": "npx jest --env=jsdom --coverage",
+    "snap": "jest --env=jsdom --updateSnapshot",
+    "lint": "eslint --ext .jsx --ext .js src/ --config ./.eslintrc.json",
+    "lint:css": "npx stylelint 'src/**/*.css'",
+    "lint:fix": "eslint --ext .jsx --ext .js src/ --fix --config ./.eslintrc.json",
+    "lint:srv": "eslint --ext .js --fix index.js --fix webpack.config.js --fix server/ --config .eslintrc.json"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": []
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/*.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/{!(withAPI),}.js",
+      "src/**/{!(App),}.jsx"
+    ],
+    "setupFiles": [
+      "<rootDir>/tests/mockServer.js"
+    ]
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^1.10.1",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@reduxjs/toolkit": "^1.8.1",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.5.0",
+    "babel-loader": "^8.2.4",
+    "body-parser": "^1.19.1",
+    "bootstrap": "4.6.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "css-loader": "^5.0.1",
+    "dev-tools": "^0.1.6",
+    "eslint-plugin-unused-imports": "^1.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "file-loader": "^6.2.0",
+    "flat": "^5.0.2",
+    "follow-redirects": "^1.14.9",
+    "font-awesome": "^4.7.0",
+    "g": "^2.0.1",
+    "history": "^5.0.0",
+    "jest": "28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "msw": "^0.35.0",
+    "node-fetch": "3.1.1",
+    "passport": "^0.5.2",
+    "passport-auth-token": "^1.0.1",
+    "passport-keycloak-oauth2-oidc": "^1.0.5",
+    "passport-oauth": "^1.0.0",
+    "passport-oauth2": "^1.6.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^2.3.1",
+    "react-dom": "^17.0.1",
+    "react-dual-listbox": "^2.2.0",
+    "react-icons": "^4.3.1",
+    "react-redux": "^8.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-syntax-highlighter": "^15.4.3",
+    "recompose": "^0.30.0",
+    "redux": "^4.2.0",
+    "regenerator-runtime": "^0.13.9",
+    "serve-favicon": "^2.5.0",
+    "style-loader": "^2.0.0",
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "unset-value": "^2.0.1",
+    "uswds": "^2.12.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.0",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/user-event": "^13.5.0",
+    "@webpack-cli/serve": "^1.6.0",
+    "babel-jest": "27.5.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "identity-obj-proxy": "^3.0.0",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
